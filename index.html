@@ -1,177 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>ALTERSPACE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet"> 
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <style>
-	@font-face {
-	      font-family: "hk-grotesk";
-	      src: url(./fonts/HankenGrotesk-Regular.eot) format("embedded-opentype");
-	      src: url(./fonts/HankenGrotesk-Regular.woff2) format("woff2"),
-	     	 url(./fonts/HankenGrotesk-Regular.woff) format("woff");
-	}
+<title>ALTERSPACE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<style>
+  @font-face {
+    font-family: "hk-grotesk";
+    src: url(./fonts/HankenGrotesk-Regular.eot) format("embedded-opentype");
+    src: url(./fonts/HankenGrotesk-Regular.woff2) format("woff2"),
+    url(./fonts/HankenGrotesk-Regular.woff) format("woff");
+  }
 
-	.hk-grotesk {
-		font-family: hk-grotesk;
-	}
+  @font-face {
+    font-family: "hk-grotesk-bold";
+    src: url(./fonts/HankenGrotesk-Bold.eot) format("embedded-opentype");
+    src: url(./fonts/HankenGrotesk-Bold.woff2) format("woff2"),
+    url(./fonts/HankenGrotesk-Bold.woff) format("woff");
+  }
 
-	@font-face {
-	      font-family: "hk-grotesk-bold";
-	      src: url(./fonts/HankenGrotesk-Bold.eot) format("embedded-opentype");
-	      src: url(./fonts/HankenGrotesk-Bold.woff2) format("woff2"),
-	     	 url(./fonts/HankenGrotesk-Bold.woff) format("woff");
-	}
+  body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    body {
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
+  .hk-grotesk {
+    font-family: hk-grotesk;
+  }
+
+  .hk-grotesk-bold {
+    font-family: hk-grotesk-bold;
+  }
+
+  .major {
+    font-family: 'Major Mono Display', monospace;
+  }
+
+  .bg-purple {
+    background-color: #333399;
+    background-image: url(imgs/bg1.png);
+    background-size: cover;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .purple {
+    color: #333399;
+  }
+
+  .bg-cyan {
+    background-color: #297de1;
+    background-image: url(imgs/bg3.png);
+    background-size: cover;
+  }
+
+  .cyan {
+    color: #297de1;
+  }
+
+  .bg-magenta {
+    background-color: #93278f;
+    background-image: url(imgs/bg2.png);
+    background-size: cover;
+  }
+
+  .magenta {
+    color: #93278f;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 0 368px;
+    border-color: transparent transparent transparent white;
+  }
+
+  .rect {
+    width: 368px;
+    height: 175px;
+    border: 10px solid white;
+  }
+
+  @media screen and (min-width: 60em) {
+    .triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 0 0 500px;
+      border-color: transparent transparent transparent white;
     }
 
-	.hk-grotesk-bold {
-		font-family: hk-grotesk-bold;
-	}	
-		
-
-  	.major {
-  		font-family: 'Major Mono Display', monospace;
-  	}
-
-  	.bg-purple {
-      background-color: #333399;            
-  		background-image: url(imgs/bg1.png);
-      background-size: cover;
-  	}
-
-    .purple {
-      color: #333399;
+    .rect {
+      width: 500px;
+      height: 200px;
     }
 
-  	.bg-cyan {
-      background-color: #297de1;      
-      background-image: url(imgs/bg3.png);
-      background-size: cover;  	
+  }
+
+  @media screen and (max-width: 60em) and (min-width: 30em) {
+    .triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 0 0 450px;
+      border-color: transparent transparent transparent white;
     }
 
-  	.cyan {
-  		color: #297de1;
-  	}
+    .rect {
+      width: 450px;
+      height: 200px;
+    }
 
-  	.bg-magenta {
-      background-color: #93278f;
-      background-image: url(imgs/bg2.png);
-      background-size: cover;
-  	}
-
-  	.magenta {
-  		color: #93278f;
-  	}
+    .f-med {
+      font-size: 3.75rem;
+    }
+  }
 
 
-  	.triangle {
-  		width: 0;
-  		height: 0;
-  		border-style: solid;
-  		border-width: 25px 0 0 368px;
-  		border-color: transparent transparent transparent white;
-  	}
+</style>
+<script>
+  $(function () {
+    var colors = ["purple", "cyan", "magenta"]
 
-  	.rect {
-  		width: 368px;
-  		height: 175px;
-  		border: 10px solid white;
-  	}
+    var r = Math.floor(Math.random() * colors.length);
 
+    $(".bg-temp").addClass("bg-" + colors[r]);
+    $(".temp").addClass(colors[r]);
+  });
+</script>
+<body class="bg-temp">
+<div class="fl w-100 pv4 ph6-l ph3 tc white">
+  <h1 class="major f-subheadline-l f-med f1 lh-title">ALTERsPaCe</h1>
+  <div class="f3-ns f4 hk-grotesk mw6 center">A pop-up library environment <br/>that you can customize to <br/><span
+          id="animate">be w3!rd</span> exactly how you want.
+  </div>
 
-  	@media screen and (min-width: 60em) {
-  		.triangle {
-  			width: 0;
-  			height: 0;
-  			border-style: solid;
-  			border-width: 30px 0 0 500px;
-  			border-color: transparent transparent transparent white;
-  		}
+  <div class="mw6 center mt5">
+    <div class="triangle center"></div>
+    <div class="bg-white rect temp tc pa2-ns pa0 hk-grotesk f3-ns f4 center">
+      <p class="hk-grotesk-bold ma2">Next up: Check back here for dates!</p>
+      <p class="ma3"><span class="hk-grotesk-bold">Somerville Public Library</span><br/>
+        <a href="https://goo.gl/maps/PNTrUVrNdCx" class="temp">79 Highland Ave</a>, Somerville, MA</p>
+      <p class="ma2 mt4 f 4-ns f5">Coming soon: Langdell Hall</p>
+      <p class="ma2 mt4 f 4-ns f5 white">Previously: Cambridge Public Library, March 1-4</p>
+    </div>
+  </div>
+  <div class="hk-grotesk f4-ns f5 mt5">
+    <p class="ma3"><a href="https://goo.gl/forms/NR6bF7hNvomNAL3P2" class="white">Let us know what you thought</a> or
+      get in touch at <a href="mailto:alterthespace@gmail.com" class="white">alterthespace[at]gmail</a>.</p>
+    <p class="ma3">Contribute to the code <a href="http://github.com/harvard-lil/alter-space" class="white">on
+      github</a>.</p>
+  </div>
+</div>
+</body>
 
-  		.rect {
-  			width: 500px;
-  			height: 200px;
-  		}
-
-  	}
-  	@media screen and (max-width: 60em) and (min-width: 30em) {
-		  .triangle {
-		  	width: 0;
-		  	height: 0;
-		  	border-style: solid;
-		  	border-width: 30px 0 0 450px;
-		  	border-color: transparent transparent transparent white;
-		  }
-
-		  .rect {
-		  	width: 450px;
-		  	height: 200px;
-		  }	
-
-  		.f-med {
-  			font-size: 3.75rem;
-  		}	
-  	}
+<script>
+  var states = ["focus", "meditate", "create", "read", "be w3!rd", "relax"];
+  var count = 0;
+  $(function () {
 
 
-  </style>
-  <script>
-      $(function() {
-        var colors = ["purple", "cyan", "magenta"]
+    var span = $("#animate");
+    setInterval(function () {
+      changeText(span)
+    }, 1000);
 
-        var r = Math.floor(Math.random()*colors.length);
+  });
 
-        $(".bg-temp").addClass("bg-"+colors[r]);
-         $(".temp").addClass(colors[r]);   
-      });
-  </script>
-  <body class="bg-temp">
-  	<div class="fl w-100 pv4 ph6-l ph3 tc white">
-		<h1 class="major f-subheadline-l f-med f1 lh-title">ALTERsPaCe</h1>
-		<div class="f3-ns f4 hk-grotesk mw6 center">A pop-up library environment <br />that you can customize to <br /><span id="animate">be w3!rd</span> exactly how you want.</div>
+  function changeText(obj) {
+    obj.text(states[count]);
+    if (count === states.length - 1) count = 0;
+    else count = count + 1;
 
-		<div class="mw6 center mt5">
-			<div class="triangle center"></div>
-			<div class="bg-white rect temp tc pa2-ns pa0 hk-grotesk f3-ns f4 center">
-				<p class="hk-grotesk-bold ma2">Next up: Check back here for dates!</p>
-				<p class="ma3"><span class="hk-grotesk-bold">Somerville Public Library</span><br />
-				<a href="https://goo.gl/maps/PNTrUVrNdCx" class="temp">79 Highland Ave</a>, Somerville, MA</p>
-				<p class="ma2 mt4 f 4-ns f5">Coming soon: Langdell Hall</p>
-				<p class="ma2 mt4 f 4-ns f5 white">Previously: Cambridge Public Library, March 1-4</p>
-			</div>
-		</div>
-		<div class="hk-grotesk f4-ns f5 mt5">
-			<p class="ma3"><a href="https://goo.gl/forms/NR6bF7hNvomNAL3P2" class="white">Let us know what you thought</a> or get in touch at <a href="mailto:alterthespace@gmail.com" class="white">alterthespace[at]gmail</a>.</p>
-			<p class="ma3">Contribute to the code <a href="http://github.com/harvard-lil/alter-space" class="white">on github</a>.</p>
-		</div>
-	</div>
-  </body>
-
-  <script>
-  	var states = ["focus", "meditate", "create", "read", "be w3!rd", "relax"]
-  	var count = 0;
-  	$(function() {
-
-	
-
-  		var span = $("#animate");
-  		setInterval(function(){changeText(span)}, 1000);
-
-  	});
-
-  	function changeText(obj) {
-  		obj.text(states[count]);
-  		if(count == states.length - 1) count = 0;
-  		else count = count+1;
-
-  	}
-  </script>
+  }
+</script>
 </html>
