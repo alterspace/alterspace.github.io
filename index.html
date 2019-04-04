@@ -74,6 +74,15 @@
     color: #93278f;
   }
 
+  img.ppl-img {
+    object-fit: cover;
+    max-width: 250px;
+    height: 260px;
+    width: 90%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+
   .triangle {
     width: 0;
     height: 0;
@@ -82,9 +91,18 @@
     border-color: transparent transparent transparent white;
   }
 
+
+  .triangle-reverse img {
+    height: 35px;
+    width: 100%;
+  }
+  .rect-reverse {
+    border: 5px solid white;
+  }
+
   .rect {
     width: 368px;
-    height: 175px;
+    height: 220px;
     border: 10px solid white;
   }
 
@@ -102,6 +120,8 @@
       height: 200px;
     }
 
+    
+
   }
 
   @media screen and (max-width: 60em) and (min-width: 30em) {
@@ -113,10 +133,18 @@
       border-color: transparent transparent transparent white;
     }
 
+    img.ppl-img {
+      width: 95%;
+      max-width: 225px;
+      height: 230px;
+    }
+
     .rect {
       width: 450px;
-      height: 200px;
+      height: 245px;
     }
+
+
 
     .f-med {
       font-size: 3.75rem;
@@ -149,7 +177,7 @@
       <p class="ma3"><span class="hk-grotesk-bold">Somerville Public Library</span><br/>
         <a href="https://goo.gl/maps/PNTrUVrNdCx" class="temp">79 Highland Ave</a>, Somerville, MA</p>
       <p class="ma2 mt4 f 4-ns f5">Coming soon: Langdell Hall</p>
-      <p class="ma2 mt4 f 4-ns f5 white">Previously: Cambridge Public Library, March 1-4</p>
+      <p class="ma2 mt4 f 4-ns f5 white">Previously: Cambridge Public Library, March 1-4, 2019</p>
     </div>
   </div>
   <div class="hk-grotesk f4-ns f5 mt5">
@@ -159,6 +187,64 @@
       github</a>.</p>
   </div>
 </div>
+
+
+<div class="fl w-100 pv4 tc white">
+  <h2 class="f1-ns f2 hk-grotesk-bold">About the project</h2>
+  <div class="f3-l f4-m f5 hk-grotesk center tl w-70-l w-90 ph3 bg-white temp rect-reverse">
+    <p>A collaboration between Harvard’s metaLAB and Library Innovation Lab, Alterspace is an immersive library experience that puts visitors in charge of their surroundings.</p>
+    <p>The library’s collection can transport patrons into the worlds of fiction, history, art. Alterspace extends that experience into the physical world, allowing patrons to create environments that best suit their needs.</p>
+    <p>Control over light, color, sound and space gives visitors the chance to create their ideal environment for meditating, reading, collaborating, playing, or whatever activity brings them through the library’s doors.</p>
+    <p>All work done for the project will be <a href="http://github.com/harvard-lil/alter-space" class="temp">open source</a> and available to any library who would like to replicate it.</p>
+  </div>
+  <div class="w-70-l w-90 center triangle-reverse"><img src="imgs/down.png"></div>
+
+</div>
+
+
+
+<div class="fl w-100 pv4 ph6-l ph3 tc white">
+  <h2 class="f1-ns f2 hk-grotesk-bold">About the team</h2>
+  <div class="fl w-100 mt5 ph5-ns">
+    <div class="fl w-33-ns w-100">
+      <img src="./imgs/anastasia-aizman.png" class="ppl-img">
+      <h3 class="hk-grotesk-bold f3">Anastasia Aizman</h3>
+      <p class="hk-grotesk f5"> </p>
+    </div>
+    <div class="fl w-33-ns w-100">
+      <img src="./imgs/matthew-battles.jpg" class="ppl-img">
+      <h3 class="hk-grotesk-bold f3">Matthew Battles</h3>
+      <p class="hk-grotesk f5"> </p>
+
+    </div>
+    <div class="fl w-33-ns w-100">
+      <img src="./imgs/keith-hartwig.jpg" class="ppl-img">
+      <h3 class="hk-grotesk-bold f3">Keith Hartwig</h3>
+      <p class="hk-grotesk f5"> </p>
+
+    </div>
+  </div>
+  <div class="fl w-100 mt5 ph5-ns">
+    <div class="fl w-33-ns w-100">
+      <img src="./imgs/alisa-kolot.jpg" class="ppl-img">
+      <h3 class="hk-grotesk-bold f3">Alisa Kolot</h3>
+      <p class="hk-grotesk f5"> </p>
+    </div>
+    <div class="fl w-33-ns w-100">
+      <img src="./imgs/clare-stanton.jpg" class="ppl-img">
+      <h3 class="hk-grotesk-bold f3">Clare Stanton</h3>
+      <p class="hk-grotesk f5"> </p>
+
+    </div>
+    <div class="fl w-33-ns w-100">
+      <img src="./imgs/jess-yurkofsky.jpg" class="ppl-img">
+      <h3 class="hk-grotesk-bold f3">Jessica Yurkofsky</h3>
+      <p class="hk-grotesk f5"> </p>
+
+    </div>
+  </div>
+</div>
+
 </body>
 
 <script>
